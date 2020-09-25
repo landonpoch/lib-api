@@ -3,8 +3,8 @@ A simple library REST API which allows you to perform CRUD operations on books.
 
 ## Running API
 Go 1.15 is recommended.  Clone repo and run the following commands:
- - go install
- - lib-api (you may need to restart your terminal for this to be in your path)
+ - `go install`
+ - `lib-api` (you may need to restart your terminal for this to be in your path)
 
 You can import the postman collection included in the library (Library.postman_collection.json).  This was a v2.1 collection export.
 
@@ -20,7 +20,12 @@ There are 5 supported operations:
 Code contains additional comments explaining rationale behind most decisions made. Also, when building production grade microservices I recommend referencing https://12factor.net/.  Some items included in this sample project such as structured logging and suggestions of a config service fall in line with 12 factor app concepts.
 
 ## Unit testing
-Unit tests are included.  While coverage is not 100% the tests that are included show a good range of scenarios.
+Unit tests are included.
+
+The following command can be used to execute the unit tests:
+ - `go test -v ./...`
+
+While coverage is not 100% the tests that are included show a good range of scenarios.
 
 Included scenarios:
  - Mocked HTTP request / response
