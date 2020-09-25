@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "95637ab1-170e-4b5b-85c5-b0319224f80c",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"{{$guid}}\",\n    \"title\": \"Don Quixote\",\n    \"author\": \"Miguel de Cervantes\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				},
+				"description": "{\n    \"id\": \"{{$guid}}\",\n    \"title\": \"Don Quixote\",\n    \"author\": \"Miguel de Cervantes\"\n}\n\n{\n    \"id\": \"{{$guid}}\",\n    \"title\": \"War and Peace\",\n    \"author\": \"Leo Tolstoy\",\n    \"publisher\": \"The Russian Messenger\"\n}\n\n{\n    \"id\": \"{{$guid}}\",\n    \"title\": \"The Catcher in the Rye\",\n    \"author\": \"J. D. Salinger\",\n    \"publisher\": \"Little, Brown and Company\"\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Query Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books?count=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/a19ef4bc-40bf-443c-939b-14631b9bd821",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"a19ef4bc-40bf-443c-939b-14631b9bd821"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/c0fbaf5a-d8fc-4b10-ad7c-6c1dd49b1f6b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"c0fbaf5a-d8fc-4b10-ad7c-6c1dd49b1f6b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"c0fbaf5a-d8fc-4b10-ad7c-6c1dd49b1f6b\",\n    \"title\": \"War and War\",\n    \"author\": \"Leo Tolstoy\",\n    \"publisher\": \"The Russian Messenger\",\n    \"created_date\": \"2020-09-25T04:37:54.939047Z\",\n    \"last_modified_date\": \"2020-09-25T04:37:54.939047Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
